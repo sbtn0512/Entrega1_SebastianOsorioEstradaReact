@@ -1,26 +1,21 @@
 import Navbar from "./components/Navbar/Navbar"
 import Footer from "./components/Footer/Footer"
+import Hero from "./components/Hero/Hero"
 
 function App() {
 
 
   return (
     <>
-      <main className="min-h-screen bg-base-100 text-base-content">
-         <Navbar />
-        {/* <Hero />  */}
-        <section className="max-w-7xl mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6">
-            {/* <SideBar /> */}
-            <div className="flex flex-col gap-6">
-              {/* <QuickFilters />
-              <VehicleGrid /> */}
-            </div>
-          </div>
-        </section>
-        {/* <CompareBar />*/}
+      <div className="min-h-screen bg-base-100 text-white">
+        <Navbar />
+        <main className="space-y-24">
+        <Hero />
+        {/*<FeaturedSection />
+        <TrendingSection /> */}
+        </main>
         <Footer />
-      </main>
+      </div>
     </>
   )
 }
