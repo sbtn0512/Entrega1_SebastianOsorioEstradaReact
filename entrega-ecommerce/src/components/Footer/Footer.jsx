@@ -2,25 +2,47 @@ import { Icon } from '@iconify/react';
 import logo from '../../assets/logo.svg'
 function Footer() {
     return (
-        <footer className='footer sm:footer-horizontal text-black-content items-center p-4 border'>
-            <aside className='grid-flow-col items-center'>
-                <img src={logo} alt="E-Commerce" className='h-10 w-auto'/>
-                <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
-            </aside>
-            <nav className='grid-flow-col gap-4 md:place-self-center md:justify-self-end'>
-                <a>
-                    <Icon
-                        icon="logos:youtube-icon"
-                        width="32"
+        <footer className="border-t border-base-300 mt-24">
+            <div className="max-w-screen-2xl mx-auto px-10 py-4 flex justify-between items-center">
+                {/* LEFT */}
+                <div className="flex items-center gap-4">
+                    <img
+                        src={logo}
+                        alt="MiniGarage"
+                        className="h-12 w-auto"
                     />
-                </a>
-                <a>
-                    <Icon
-                        icon="devicon:twitter"
-                        width="24"
-                    />
-                </a>
-            </nav>
+                    <div>
+                        <h3 className="font-bold text-lg">
+                            MiniGarage
+                        </h3>
+                        <p className="text-sm text-base-content/60">
+                            Collect legendary vehicles.
+                        </p>
+                    </div>
+                </div>
+                {/* CENTER */}
+                <div className="text-center">
+                    <p className="text-sm text-base-content/60">
+                        © {new Date().getFullYear()} MiniGarage.
+                        All rights reserved.
+                    </p>
+                </div>
+                {/* RIGHT */}
+                <div className="flex gap-5">
+                    <a className="hover:text-primary transition-colors duration-300 cursor-pointer">
+                        <Icon
+                            icon="logos:youtube-icon"
+                            width="28"
+                        />
+                    </a>
+                    <a className="hover:text-primary transition-colors duration-300 cursor-pointer">
+                        <Icon
+                            icon="devicon:twitter"
+                            width="24"
+                        />
+                    </a>
+                </div>
+            </div>
         </footer>
     );
 }

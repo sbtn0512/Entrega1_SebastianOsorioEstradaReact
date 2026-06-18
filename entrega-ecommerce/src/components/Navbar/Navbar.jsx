@@ -39,7 +39,7 @@ function Navbar() {
                         </button>
                         <button className="btn btn-primary rounded-full px-6">
                             {/* <User size={18} /> */}
-                            Account
+                            Cuenta
                         </button>
                     </div>
                 </div>
