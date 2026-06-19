@@ -1,13 +1,11 @@
 import useFetch from "../../hooks/useFetch";
 import CollectionCard from "./CollectionCard";
-import { Routes, Route } from "react-router-dom";
-
 
 function FeaturedSection() {
 
     const url = "https://api.npoint.io/523ffb6a415689238fae";
     const { data } = useFetch(url);
-    console.log(data);
+    const categoryFeatured = data.collections?.filter((cat) => cat.featured);
 
     return (
         <section className="max-w-screen-2xl mx-auto px-5 py-4">
@@ -24,7 +22,7 @@ function FeaturedSection() {
             </div>
             <div className="grid grid-cols-2 gap-8">
                 {
-                    data.collections?.map((collection) => (
+                    categoryFeatured?.map((collection) => (
                         <CollectionCard
                             key={collection.id}
                             title={collection.title}

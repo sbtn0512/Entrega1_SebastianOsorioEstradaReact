@@ -1,6 +1,7 @@
 import logo from '../../assets/logo.svg'
 import CartWidget from './CartWidget'
 import FindWidget from '../Navbar/FindWidget'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
     return (
@@ -20,9 +21,10 @@ function Navbar() {
                             </a>
                         </li>
                         <li>
-                            <a className="hover:text-primary transition-all duration-300 cursor-pointer">
+                            <Link to={'/categories'} className='hover:text-primary transition-all duration-300 cursor-pointer'>Categorias</Link>
+                            {/* <a className="hover:text-primary transition-all duration-300 cursor-pointer">
                                 Categorias
-                            </a>
+                            </a> */}
                         </li>
                         <li>
                             <a className="hover:text-primary transition-all duration-300 cursor-pointer">
