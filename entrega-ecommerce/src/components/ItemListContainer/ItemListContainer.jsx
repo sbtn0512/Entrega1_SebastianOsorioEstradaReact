@@ -10,7 +10,7 @@ function ItemListContainer() {
     const filtrados = categoryId ? data.vehicles?.filter((vehicle) => vehicle.categoryId === categoryId) : data.vehicles
     
     return (
-        <div className="grid grid-cols-4 gap-8">
+        <div className="min-h-300 overflow-y-auto pr-2">
             <ItemList vehicles={filtrados} />
         </div>
     )
